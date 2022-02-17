@@ -7,7 +7,7 @@ module.exports = {
     name: 'reactionrole',
     
     async run (client, message, args) {
-        const channel = '921533454007549963'
+        const channel = '921724947452280832'
         const Fortniterole = message.guild.roles.cache.find(role => role.id === "921724370328629258")
         const Minecraftrole = message.guild.roles.cache.find(role => role.name === "Minecraft")
         const Rainbowrole = message.guild.roles.cache.find(role => role.name === "Rainbow 6 siege")
