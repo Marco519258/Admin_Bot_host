@@ -32,8 +32,6 @@ module.exports = {
         messageEmbed.react(ValoEmoji);
         messageEmbed.react(RocketEmoji);
 
-        
-
 
         client.on('messageReactionAdd', async (reaction, user) => {
             if(reaction.message.partial) await reaction.message.fetch();
