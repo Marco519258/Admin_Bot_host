@@ -13,12 +13,14 @@ module.exports = {
         const Rainbowrole = message.guild.roles.cache.find(role => role.name === "Rainbow 6 siege")
         const Valorantrole = message.guild.roles.cache.find(role => role.name === "Valorant")
         const RocketLeaguerole = message.guild.roles.cache.find(role => role.name === "Rocket League")
+        const Huntrole = message.guild.roles.cache.find(role => role.name === "Hunt Showdown")
 
         const FortniteEmoji = '1️⃣';
         const MinecraftEmoji =  '2️⃣';
         const RainbowEmoji = '3️⃣';
         const ValoEmoji = '4️⃣';
         const RocketEmoji = '5️⃣';
+        const HuntEmoji = '6️⃣'
 
         let embed = new Discord.MessageEmbed()
         .setColor("#002fff")
@@ -31,6 +33,8 @@ module.exports = {
         messageEmbed.react(RainbowEmoji);
         messageEmbed.react(ValoEmoji);
         messageEmbed.react(RocketEmoji);
+        messageEmbed.react(HuntEmoji);
+
 
 
         client.on('messageReactionAdd', async (reaction, user) => {
@@ -54,6 +58,9 @@ module.exports = {
                 }
                 if(reaction.emoji.name === RocketEmoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.add(RocketLeaguerole)
+                }
+                if(reaction.emoji.name === HuntEmoji) {
+                    await reaction.message.guild.members.cache.get(user.id).roles.add(Huntrole)
                 }
             } else {
                 return;
@@ -81,6 +88,9 @@ module.exports = {
                 }
                 if(reaction.emoji.name === RocketEmoji) {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(RocketLeaguerole)
+                }
+                if(reaction.emoji.name === HuntEmoji) {
+                    await reaction.message.guild.members.cache.get(user.id).roles.remove(HuntEmoji)
                 }
             } else {
                 return;
