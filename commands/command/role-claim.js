@@ -90,7 +90,7 @@ module.exports = {
                     await reaction.message.guild.members.cache.get(user.id).roles.remove(RocketLeaguerole)
                 }
                 if(reaction.emoji.name === HuntEmoji) {
-                    await reaction.message.guild.members.cache.get(user.id).roles.remove(HuntEmoji)
+                    await reaction.message.guild.members.cache.get(user.id).roles.remove(Huntrole)
                 }
             } else {
                 return;
