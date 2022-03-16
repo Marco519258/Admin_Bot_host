@@ -25,7 +25,7 @@ module.exports = {
         let embed = new Discord.MessageEmbed()
         .setColor("#002fff")
         .setTitle('Rollen zuweisung')
-        .setDescription("Wähle deine Spiele um die entsprechende Channel zu sehen.\nFalls es nicht geht, narchicht darüber benutzen\n\n" + `${FortniteEmoji} = ${Fortniterole} \n` + `${MinecraftEmoji} = ${Minecraftrole} \n` + `${RainbowEmoji} = ${Rainbowrole} \n` + `${ValoEmoji} = ${Valorantrole} \n` + `${RocketEmoji} = ${RocketLeaguerole} \n`)
+        .setDescription("Wähle deine Spiele um die entsprechende Channel zu sehen.\nFalls es nicht geht, narchicht darüber benutzen\n\n" + `${FortniteEmoji} = ${Fortniterole} \n` + `${MinecraftEmoji} = ${Minecraftrole} \n` + `${RainbowEmoji} = ${Rainbowrole} \n` + `${ValoEmoji} = ${Valorantrole} \n` + `${RocketEmoji} = ${RocketLeaguerole} \n` + `${HuntEmoji} = ${Huntrole} \n`)
 
         let messageEmbed = await message.channel.send(embed);
         messageEmbed.react(FortniteEmoji);
