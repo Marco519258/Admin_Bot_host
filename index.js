@@ -17,15 +17,8 @@ client.commands = new Discord.Collection();
 const commandsFolders = readdirSync('./commands');
 const Timeout = new Discord.Collection();
 
-const distube = require('distube');
-client.distube = new distube(client, { searchSongs: false, emitNewSongOnly: true})
-client.distube
-.on('playSong', (message, queue, song) => message.channel.send(
-  `Playing \`${song.name}\` - \`${song.formattedDuration}\`\nRequested by: ${song.user}`
-))
-.on('addSong', (message, queue, song) => message.channel.send(
-  `Added \`${song.name}\` - \`${song.formattedDuration}\` to the queue by ${song.user}`
-))
+
+
 
 
 for (const folder of commandsFolders) {
@@ -1036,4 +1029,4 @@ client.on("messageReactionRemove" , (reaction, user) => {
 
 
 
-client.login(process.env.token);
+client.login("OTI2MTkwMzgzNjI3NjQ0OTY5.Yc4EAw.dv9Sxk1tpB0fwTKWxC-3ilN_udo");
